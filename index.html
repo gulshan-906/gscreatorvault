@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>CreatorVault - Premium Social Accounts</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- FULLSCREEN PHOTO VIEWER -->
+<div id="photoViewer" class="photo-viewer">
+
+  <button
+    class="photo-viewer-close"
+    onclick="closePhotoViewer()"
+  >
+    ×
+  </button>
+
+  <div
+    class="photo-viewer-content"
+    id="photoViewerContent"
+  ></div>
+
+</div>
+
+<!-- =========================================
+     CREATORVAULT TERMS & CONDITIONS
+========================================= -->
+
+<div id="termsPage" class="terms-page">
+
+  <!-- HEADER -->
+  <div class="terms-header">
+
+    <button
+   class="terms-back"
+   type="button"
+   onclick="
+    document.getElementById('termsPage').style.       display='none';
+    document.getElementById('termsPage').classList.  remove('active');
+    document.body.style.overflow='';
+   "
+   aria-label="Back"
+    >
+    ‹
+   </button>
+
+    <div class="terms-brand">
+   <span>CREATOR</span><strong>VAULT</strong>
+  </div>
+
+    <div class="terms-header-icon">
+      ⚖
+    </div>
+
+  </div>
+
+
+  <!-- CONTENT -->
+  <div class="terms-content">
+
+    <div class="terms-hero">
+
+      <div class="terms-icon">
+        📜
+      </div>
+
+      <h1>Terms &amp; Conditions</h1>
+
+      <p>
+        Please read these terms carefully before using
+        CreatorVault or purchasing any listing.
+      </p>
+
+    </div>
+
+
+    <!-- 01 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>01</span>
+        General Terms
+      </div>
+
+      <p>
+        By using CreatorVault, you agree to follow these
+        Terms &amp; Conditions and use the platform responsibly.
+      </p>
+
+    </div>
+
+
+    <!-- 02 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>02</span>
+        Listing Information
+      </div>
+
+      <p>
+        Listing information such as subscribers, followers,
+        views, reach, monetization and earning details should
+        be reviewed carefully before making a purchase.
+      </p>
+
+    </div>
+
+
+    <!-- 03 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>03</span>
+        Payment
+      </div>
+
+      <p>
+        Payments must be made only through the UPI details
+        displayed on the official CreatorVault payment page.
+      </p>
+
+    </div>
+
+
+    <!-- 04 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>04</span>
+        Payment Verification
+      </div>
+
+      <p>
+        After making a payment, the buyer must submit a valid
+        WhatsApp number, UTR / Transaction ID and payment
+        screenshot for verification.
+      </p>
+
+    </div>
+
+
+    <!-- 05 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>05</span>
+        Sold Out Listings
+      </div>
+
+      <p>
+        Listings marked as
+        <strong>Sold Out</strong>
+        are not available for purchase.
+        Please check the listing status before making any payment.
+      </p>
+
+    </div>
+
+
+    <!-- 06 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>06</span>
+        Buyer Responsibility
+      </div>
+
+      <p>
+        Buyers are responsible for checking the listing details,
+        price, availability and other displayed information before
+        completing a transaction.
+      </p>
+
+    </div>
+
+
+    <!-- 07 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>07</span>
+        Fraud &amp; Misuse
+      </div>
+
+      <p>
+        Fake payment screenshots, incorrect transaction details
+        or fraudulent activity may result in rejection of the order.
+      </p>
+
+    </div>
+
+
+    <!-- 08 -->
+    <div class="terms-card">
+
+      <div class="terms-card-title">
+        <span>08</span>
+        Support
+      </div>
+
+      <p>
+        For questions regarding a listing or an order, please
+        use the support option available on CreatorVault.
+      </p>
+
+    </div>
+
+
+    <!-- FINAL NOTE -->
+    <div class="terms-footer-note">
+
+      <div class="terms-footer-icon">
+        ✓
+      </div>
+
+      <div>
+
+        <strong>CreatorVault Terms</strong>
+
+        <p>
+          By using CreatorVault, you acknowledge that you have
+          read and understood these Terms &amp; Conditions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- HEADER -->
+<header class="header">
+
+  <div class="logo">
+    <span>CREATOR</span><b>VAULT</b>
+  </div>
+
+  <nav>
+    <button onclick="goHome()">Home</button>
+    <button onclick="goListings()">Listings</button>
+    <button onclick="scrollHow()">How It Works</button>
+  </nav>
+
+  <button class="header-buy" onclick="goListings()">
+    Browse
+  </button>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      PREMIUM DIGITAL ASSETS
+    </div>
+
+    <h1>
+      BUY VERIFIED<br>
+      <span>CREATOR PAGES</span>
+    </h1>
+
+    <p>
+      Premium YouTube Channels, Instagram Pages and Facebook Pages
+      with transparent stats and secure payment verification.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button class="gold-btn" onclick="goListings()">
+        Browse Listings
+      </button>
+
+      <button class="outline-btn" onclick="scrollHow()">
+        How It Works
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SEARCH -->
+<section class="search-section" id="listings">
+
+  <div class="section-title">
+    <span class="eyebrow">MARKETPLACE</span>
+    <h2>Available Listings</h2>
+    <p>Find your next creator asset.</p>
+  </div>
+
+  <div class="search-box">
+
+    <span>⌕</span>
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search channel, page, niche..."
+      oninput="renderListings()"
+    >
+
+  </div>
+
+
+  <div class="filters">
+
+    <button class="filter active" data-cat="all" onclick="setCategory('all',this)">
+      All
+    </button>
+
+    <button class="filter" data-cat="youtube" onclick="setCategory('youtube',this)">
+      ▶ YouTube
+    </button>
+
+    <button class="filter" data-cat="instagram" onclick="setCategory('instagram',this)">
+      ◎ Instagram
+    </button>
+
+    <button class="filter" data-cat="facebook" onclick="setCategory('facebook',this)">
+      f Facebook
+    </button>
+
+  </div>
+
+
+  <div id="listingGrid" class="listing-grid"></div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+
+  <div class="section-title">
+    <span class="eyebrow">SIMPLE PROCESS</span>
+    <h2>How It Works</h2>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <div>01</div>
+      <h3>Choose</h3>
+      <p>Find the YouTube Channel, Instagram Page or Facebook Page you want.</p>
+    </div>
+
+    <div class="step">
+      <div>02</div>
+      <h3>Pay</h3>
+      <p>Pay the exact listing amount using UPI, PhonePe or Google Pay.</p>
+    </div>
+
+    <div class="step">
+      <div>03</div>
+      <h3>Verify</h3>
+      <p>Submit your UTR, WhatsApp number and payment screenshot.</p>
+    </div>
+
+    <div class="step">
+      <div>04</div>
+      <h3>Transfer</h3>
+      <p>After payment verification, transfer details are handled manually.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CREATORVAULT FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="footer-brand">
+    <span>CREATOR</span><strong>VAULT</strong>
+  </div>
+
+  <div class="footer-links">
+
+    <button onclick="goHome()">
+      Home
+    </button>
+
+    <button onclick="goListings()">
+      Listings
+    </button>
+
+    <button onclick="scrollHow()">
+      How It Works
+    </button>
+
+    <button onclick="openTerms()">
+      Terms &amp; Conditions
+    </button>
+
+  </div>
+
+  <div class="footer-line"></div>
+
+  <p class="footer-copy">
+    © 2026 CreatorVault. All Rights Reserved.
+  </p>
+
+</footer>
+
+<!-- DETAILS MODAL -->
+<div id="detailsModal" class="modal">
+
+  <div class="modal-box details-box">
+
+    <button class="close-btn" onclick="closeDetails()">×</button>
+
+    <div id="detailsContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- PURCHASE MODAL -->
+<div id="purchaseModal" class="modal">
+
+  <div class="modal-box purchase-box">
+
+    <button class="close-btn" onclick="closePurchase()">×</button>
+
+    <div class="purchase-header">
+
+      <span class="eyebrow">SECURE PURCHASE</span>
+
+      <h2 id="purchaseTitle">
+        Purchase
+      </h2>
+
+      <p id="purchasePlatform">
+        YouTube Channel
+      </p>
+
+    </div>
+
+
+    <div class="purchase-summary">
+
+      <span>PAYABLE AMOUNT</span>
+
+      <strong id="purchasePrice">
+        ₹0
+      </strong>
+
+    </div>
+
+
+    <div class="qr-area">
+
+      <h3>Scan & Pay</h3>
+
+      <div id="paymentQR"></div>
+
+      <p>
+        Scan using PhonePe, Google Pay or any UPI app.
+      </p>
+
+    </div>
+
+
+    <button class="pay-btn" onclick="payWithUPI()">
+      💳 Pay with PhonePe / Google Pay
+    </button>
+
+
+    <div class="upi-row">
+
+      <div>
+        <small>UPI ID</small>
+        <strong id="displayUPI">
+          YOURUPI@upi
+        </strong>
+      </div>
+
+      <button onclick="copyUPI()">
+        Copy
+      </button>
+
+    </div>
+
+
+    <div class="payment-line">
+      <span>AFTER PAYMENT</span>
+    </div>
+
+
+    <form id="paymentForm" onsubmit="submitPayment(event)">
+
+      <input
+        type="hidden"
+        id="purchaseListingId"
+      >
+
+
+      <label>
+        Mobile / WhatsApp Number
+      </label>
+
+      <input
+  type="tel"
+  id="buyerMobile"
+  placeholder="Enter Your WhatsApp Number"
+  maxlength="10"
+  inputmode="numeric"
+>
+
+
+      <label>
+        UTR / Transaction ID
+      </label>
+
+      <input
+        id="buyerUTR"
+        type="text"
+        placeholder="Enter UTR / Transaction ID"
+        required
+      >
+
+
+      <label>
+        Payment Screenshot
+      </label>
+
+      <div class="file-upload">
+
+        <input
+          id="paymentScreenshot"
+          type="file"
+          accept="image/*"
+          required
+        >
+
+        <span>
+          📸 Select payment screenshot
+        </span>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        Submit Payment
+      </button>
+
+    </form>
+
+
+    <p class="secure-note">
+      Your payment details will be sent for manual verification.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+
+  <button onclick="goHome()">
+    <span>⌂</span>
+    Home
+  </button>
+
+  <button onclick="goListings()">
+    <span>◇</span>
+    Listings
+  </button>
+
+  <button
+  type="button"
+  onclick="
+    document.getElementById('termsPage').style.display='flex';
+    document.getElementById('termsPage').classList.add('active');
+    document.body.style.overflow='hidden';
+  "
+>
+  <span>?</span>
+  Help
+</button>
+
+</div>
+
+<!-- PREMIUM ALERT MODAL -->
+<div id="premiumAlert" class="premium-alert">
+  <div class="premium-alert-backdrop"></div>
+
+  <div class="premium-alert-box">
+
+    <div class="premium-alert-icon" id="premiumAlertIcon">
+      ✓
+    </div>
+
+    <div class="premium-alert-title" id="premiumAlertTitle">
+      SUCCESS
+    </div>
+
+    <div class="premium-alert-message" id="premiumAlertMessage">
+      Payment details submitted successfully!
+    </div>
+
+    <button
+      type="button"
+      class="premium-alert-btn"
+      onclick="closePremiumAlert()"
+    >
+      CONTINUE
+    </button>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
